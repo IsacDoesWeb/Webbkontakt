@@ -1,0 +1,757 @@
+*{
+    box-sizing: border-box;
+}
+body, html{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #fff;
+    color: #535353;
+    background-image: none;
+
+}
+header{
+    background-color: #fff;
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    position: relative !important;
+    top: 0;
+    left: 0;
+    display: flex;
+    border-bottom: 5px ;
+    border-color: #c0c0c0;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    padding: 20px;
+    opacity: 1;
+}
+
+.logo{
+    width: 200px;
+    position: relative;
+    order: 1;
+    z-index: 9999;
+    opacity: 1;
+}
+#meny{
+    padding: 0;
+    font-size: 14px;
+    font-family: "lexend", sans-serif;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    position: static;
+    order: 2;
+}
+.ghost{
+    order: 3;
+    width: 200px;
+}
+#meny ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 50px;
+}
+
+#meny li {
+    display: flex;
+    margin-right: 10px;
+}
+
+
+#meny a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 0; 
+    position: relative;
+    display: inline-block;
+}
+#meny a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease-in-out;
+}
+
+#meny a:hover::after,
+#meny a:focus::after,
+#meny a:active::after {
+    width: 100%;
+}
+#meny a.active::after{
+    width: 100%;
+}
+#container{
+    flex-direction: column;
+    margin-top: 120px;
+    background-color: #fff;
+    width: 70%;
+    max-width: 1350px;
+    min-width: 70%;
+    display: flex;
+    border-radius: 2px;
+    gap: 90px;
+    min-width: unset;
+}
+.startbild{ 
+    width: 650px;
+    border-radius: 10px;
+}
+
+h1{
+    display: flex;
+    position: absolute;
+    left: 20%; transform: translateX(-50%);
+    font-size: 20px;
+    font-family: "Lexend", sans-serif;
+    gap: 15px;
+    width: 23%;
+    padding-right: 200px;
+    color: #000;
+
+}
+h1::before,
+h1::after {
+    content: "";
+    flex-grow: 1;
+    margin-top: 12px;
+    height: 3px; /* Tjocklek på linjen */
+    background: linear-gradient(to right, transparent 5%, black);
+    clip-path: polygon(0% 50%, 100% 0%, 100% 100%, 0% 50%); /* Gör spetsiga ändar */
+}
+
+h1::after {
+    background: linear-gradient(to left, transparent 5%, black);
+    clip-path: polygon(100% 50%, 0% 0%, 0% 100%, 100% 50%); /* Justera spetsen för höger linje */
+}
+h2{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+h4{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    margin-left: 20px;
+    margin-bottom: -90px;
+    color: #000;
+}
+
+footer{
+    border-top: #000 2px solid;
+    width: 100%;
+    height: 200px;
+    margin-top: 200px;
+}
+
+#footermeny1{
+    background-color: #fff;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 100px;
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    font-family: "Lexend", sans-serif;
+    color: #000;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+#footermeny1 a{
+    text-decoration: none;
+    color: black;
+}
+#footermeny1 a:visited{
+    color: black;
+}
+#footermeny1 ul{
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+#footermeny1 li{
+    display: flex;
+    flex-direction: flex-start;
+    margin-bottom: 10px;
+}
+
+/* kontaktformulär */
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box;
+    margin-top: 6px; 
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  input[type=email], select, textarea {
+    width: 100%; 
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box;
+    margin-top: 6px; 
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .contactform {
+    border-radius: 5px;
+    background-color: #fff;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    border-radius: 2px;
+    text-align: left;
+  }
+#se_paket{
+    width: 160px;
+    height: 45px;
+    border-radius: 10px;
+    background-color: #080b33;
+    color: #fff;
+    font-family: "Lexend", sans-serif;
+    margin-top: 20px;
+    align-self: center;
+}
+#se_paket:hover{
+    transform: scale(1.05);
+}
+#item img {
+    width: 700px; /* Justera bildens bredd */
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.5); /* En lätt vit bakgrund */
+    border-radius: 10px; /* Lägg till en lätt rundning om du vill */
+}
+.item {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    min-height: 400px;
+    margin-top: 20px;
+    color: #000;
+    gap: 100px;
+
+}
+.item div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+#item1, #item2, #item3{
+    display: flex;
+}
+#text1{
+    margin-left: 80px;
+}
+#text2{
+    margin-right: 80px;
+}
+#text3{
+    margin-left: 30px;
+}
+p{
+    font-size: 14px;
+}
+.icons{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.icons a{
+    text-decoration: none;
+}
+.paketcontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 200px;
+    max-width: 1500px;
+}
+.paketcontainer ul{
+    list-style-type: none;
+    padding: 0;
+
+}
+.paketcontainer li{
+    display: flex;
+    justify-content: flex-start;
+    display: block;
+    text-align: left;
+    
+}
+h3{
+    font-size: 22px;
+    color: #297a3b;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.paket {
+    display: flex;
+    flex-direction: column;
+    width: 500px; /* Ger varje paket ett brett utrymme */
+    position: relative; /* Gör så att vi kan använda positionering för linjer */
+    list-style: none;
+    font-size: 15px;
+    padding-left: 30px;
+    font-family: "Lexend", sans-serif;
+    max-width: 100%;
+    min-width: 280px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    padding: 1rem;
+}
+
+.fade-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fade-list li {
+    padding: 10px;
+    font-size: 17px;
+    position: relative;
+}
+
+/* Linje till vänster om första paketet */
+.paket:first-child::before {
+    content: "";
+    position: absolute;
+    top: -20px; /* Linjen går 20px över objektets topp */
+    left: -10px; /* Placera linjen till vänster om objektet */
+    width: 2px; /* Bredden på linjen */
+    height: calc(100% + 200px); /* Gör linjen 40px längre (20px upp och 20px ner) */
+    background-color: black;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.4) 100%);
+    transition: background 0.3s ease;
+}
+
+/* Linjer mellan varje paket */
+.paket:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: -10px; /* Linjen går 20px över objektets topp */
+    left: 100%; /* Placera linjen på höger sida om varje objekt */
+    width: 2px; /* Linjens bredd */
+    height: calc(100% + 150px); /* Gör linjen 40px längre (20px upp och 20px ner) */
+    background-color: black;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
+    transition: background 0.3s ease;
+}
+
+/* Linje till höger om sista paketet */
+.paket:last-child::after {
+    content: "";
+    position: absolute;
+    top: -20px; /* Linjen går 20px över objektets topp */
+    right: -10px; /* Placera linjen till höger om objektet */
+    width: 2px; /* Bredden på linjen */
+    height: calc(100% + 90px); /* Gör linjen 40px längre (20px upp och 20px ner) */
+    background-color: black;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.4) 100%);
+    transition: background 0.1s ease;
+}
+.paketlink button{
+    width: 150px;
+    height: 40px;
+    border-radius: 14px;
+    border-color: #000;
+    color: black;
+    margin-top: 10px;
+    font-family: "Lexend", sans-serif;
+}
+.paketlink button:hover{
+    background-color: #04AA6D;
+    color: black;
+}
+.paketlink{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    margin-top: 400px;
+    margin-left: 150px;
+}
+.copy{
+    padding-bottom: 20px;
+}
+.exempel-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    font-family: 'Lexend', sans-serif;
+}
+
+.exempel-container1, .exempel-container2 {
+    margin-bottom: 4rem;
+}
+.exempel-container1{
+    margin-bottom: 100px;
+}
+.exempel-container1 h4,
+.exempel-container2 h4 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.exempel-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.knappgrupp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+}
+
+.knappgrupp button {
+    width: 150px;
+    height: 80px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.knappgrupp button:hover {
+    background-color: #555;
+}
+
+.knappgrupp p {
+    text-align: center;
+    margin: 0;
+    font-weight: 400;
+}
+.faq-container{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 160px;
+}
+h5{
+    font-size: 16px;
+    font-family: "lexend", sans-serif;
+}
+.faq-container h3{
+    font-size: 30px;
+    color: #000;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#button-jkpgarm{
+    background-image: url(pixelcut-export-3.png);
+    background-size: cover;
+    background-position: center;
+}
+#meny-knapp{
+    display: none;
+}
+.omoss-container{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 160px;
+}
+.omoss-container h3{
+    font-size: 30px;
+    color: #000;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Mobilformat /*
+
+/* Döljer hamburgermenyn på desktop */
+@media screen and (max-width: 768px) {
+    html, body{
+        min-width: 320px;
+        overflow-x: hidden;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        height: 80px;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: rgb(255, 255, 255); /* eller en annan färg */
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #container{
+        width: 95%;
+        display: flex;
+        align-items: center;
+        height: auto;
+
+    }
+    #meny-knapp {
+        display: block;
+        z-index: 10000; /* högre än logotypens 9999 */
+        position: absolute; /* Lägg till denna om den inte redan är där */
+        top: 20px;
+        left: 20px; /* eller justera efter smak */
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    #meny {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        background-color: white;
+        border-top: 1px solid #ccc;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #meny.visad {
+        display: flex;
+        background-color: white;
+    }
+
+    #meny ul {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        margin: 0;
+        padding-left: 0;
+    }
+    #meny a{
+        border: 1.5px solid black;
+        border-radius: 20px;
+        padding: 12px;
+        width: 150px;
+    }
+    #meny a::after{
+        display: none;
+    }
+
+
+    .item {
+        flex-direction: column;
+        align-items: center;
+        gap: 1px;
+        width: 100%;
+        max-width: 768px;
+    }
+
+    .item img {
+        order: 0;
+        width: 95%;
+        max-width: 95%;
+        height: auto;
+    }
+
+    .item div {
+        order: 1;
+        text-align: center;
+        padding: 10px;
+    }
+    #text1 button, #text2 button, #text3 button{
+        width: 50%;
+        height: 50px;
+        font-size: 15px;
+    }
+
+    #text1, #text2, #text3 {
+        margin: 0;
+    }
+    #item3{
+        margin-bottom: -100px;
+    }
+
+    #footermeny1 {
+        display: flex;
+        flex-wrap: wrap; /* Gör att innehållet bryts till nästa rad */
+        justify-content: space-evenly; /* Sprider ut objekten jämnt */
+        margin-left: 0;
+        text-align: center;
+    }
+    #footermeny ul{
+        display: flex;
+        align-items: center;    
+        justify-content: center;
+    }
+    #footermeny1 li {
+        width: 30%; /* Ger varje element 30% av bredden */
+        display: inline-block; /* Gör så att de ligger på samma rad */
+        text-align: center; /* Centrerar texten inom varje li */
+    }
+    .icons{
+        padding-top: 40px;
+    }
+    .logo{
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: -10px;
+        width: 180px;
+    }
+    body{
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .paketcontainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 200px;
+        margin-top: 120px;
+        width: 90%;
+        min-width: 350px !important;
+        padding: 10px;
+        padding-bottom: 40px;
+    }
+    .paket * {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+      }
+    .paket{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        min-height: 250px;
+        max-height: 350px;
+    }
+    .paketlink{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+    .paketlink button{
+        height: 50px;
+        width: 160px;
+        font-size: 16px;
+    }
+    .paket ul, .paket p, .paket h3 {
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+    h3{
+        padding-bottom: 10px;
+    }
+    .shade{
+        display: none !important;
+    }
+    footer {
+        height: auto; /* Låt höjden vara automatisk så att den anpassas efter innehållet */
+        padding: 10px 0; /* Minska padding för att göra footern mindre */
+    }
+    .exempel-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .knappgrupp button {
+        width: 200px;
+        height: 80px;
+    }
+}
+
+.tack{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 250px;
+    flex-direction: column;
+}
+.shade{
+    color: grey;
+}
+
+
+
+  
+  
+  
+  
+  
