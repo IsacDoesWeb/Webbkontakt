@@ -444,7 +444,7 @@ h3{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 5rem;
 }
 
 .knappgrupp {
@@ -497,9 +497,21 @@ h5{
     text-align: center;
 }
 #button-jkpgarm{
-    background-image: url(pixelcut-export-3.png);
+    background-image: url(awprofilbild.png);
     background-size: cover;
     background-position: center;
+}
+#button-avancerad{
+    background-image: url(avanceradbackground.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#button-webbkontakt{
+    background-image: url(logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
 }
 #meny-knapp{
     display: none;
@@ -728,7 +740,7 @@ h5{
     .exempel-buttons {
         flex-direction: column;
         align-items: center;
-        gap: 1.5rem;
+        gap: 3.5rem;
     }
 
     .knappgrupp button {
@@ -747,11 +759,3 @@ h5{
 .shade{
     color: grey;
 }
-
-
-
-  
-  
-  
-  
-  
